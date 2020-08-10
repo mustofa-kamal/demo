@@ -41,4 +41,10 @@ public class UserRegisterController {
         return users;
     }
 
+    @GetMapping(params = "email")
+    List<User> findByEmail(String email) {
+        List<User> users = userRegisterService.findByEmail(email);
+        return users;
+    }
+
 }

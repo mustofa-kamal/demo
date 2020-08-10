@@ -14,4 +14,5 @@ public interface UserRegisterService {
 
     List<User> findByName(String name);
 
+    List<User> findByEmail(String email);
 }

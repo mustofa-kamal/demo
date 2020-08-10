@@ -39,7 +39,6 @@ public class UserRegisterServiceImpl implements UserRegisterService{
         return list;
     }
 
-
     @Override
     public List<User> findAllUsers(){
         return userRepository.findAll();
@@ -48,8 +47,11 @@ public class UserRegisterServiceImpl implements UserRegisterService{
     @Override
     public List<User> findByName(String name){
         return userRepository.findByName(name);
-
     }
 
+    @Override
+    public List<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 
 }
